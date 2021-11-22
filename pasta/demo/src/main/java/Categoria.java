@@ -15,9 +15,9 @@ public class Categoria extends HttpServlet {
         // protocolo HTTP/HTTPS 
             // request - solicitacao do usuario - ex. o usuario acessando end. via chrome
             // response - resposta do servidor ao usuario - ex, carregar a pag web no chrome
+        String nome = req.getParameter("nome");
+        String descricao = req.getParameter("descricao");
         PrintWriter out = resp.getWriter();
-        out.println("Servelet Categoria");
-
-    }
-    
+        out.printf("Modulo Categoria -- cat = %s - %s", nome, descricao);
+    } 
 }
