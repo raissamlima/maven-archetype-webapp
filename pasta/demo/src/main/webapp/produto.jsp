@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>Cadastro de Produto</h1>
-    <form action="/demo-1/produto">
+    <form action="/demo-1/produto" method="post">
     nome: <input type="text" name="nome" id="nome"><br />
     valor: <input type="number" name="valor" min="0.00" max="10000.00" step="0.01" id="valor"><br />
     id_categoria: <input type="number" name="id_categoria" id="id_categoria"><br />
