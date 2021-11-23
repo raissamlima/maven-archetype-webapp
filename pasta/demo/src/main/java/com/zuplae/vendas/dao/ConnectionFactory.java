@@ -1,5 +1,6 @@
 package com.zuplae.vendas.dao;
 
+import java.beans.PropertyVetoException;
 import java.sql.Connection;
 import java.sql.SQLException;
 
@@ -13,10 +14,13 @@ public class ConnectionFactory {
 
     public ConnectionFactory() {
         ComboPooledDataSource pool = new ComboPooledDataSource();
-        pool.setJdbcUrl("jdbc:postgresql://localhost/postgres");
-        pool.setUser("postgres");
-        pool.setPassword("123456");
-        pool.setMaxPoolSize(10);
+        try {
+            pool.setDriverClass("org.postgresql.Driver"); 
+        // Arrumando a questão do tomcat que não estava funcionando e o try/catch para corrigir a exceção
+        // que é pedida quando se faz um pool set driver class
+        } catch (PropertyVetoException e) {
+            e.printStackTrace();
+        }
         this.dataSource = pool;
     }
 
