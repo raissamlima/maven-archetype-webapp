@@ -14,9 +14,9 @@
 </head>
 <body>
     <h1>Categoria - Alterando</h1>
-    <form action="/demo-1/categoria/alterar"></form method="post"> 
+    <form action="/demo-1/categoria/alterar" method="post"> 
         Id: <input type="text" name="id" id="id" value="<%= model.getId() %>"> <br />
-        Nome: <input type="text" name="nome" id="nome" value="<% model.getNome() %>="> <br />
+        Nome: <input type="text" name="nome" id="nome" value="<%= model.getNome() %>"> <br />
         <input type="submit" value="Alterar">
     </form>
 </body>

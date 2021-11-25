@@ -11,7 +11,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Categoria-Lista</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <h1>Lista de categorias</h1>
@@ -34,7 +34,7 @@
                     <td><%= model.getNome() %></td>
                     <td>
                     <a href="/demo-1/categoria/carregar?id=<%= model.getId() %>">Alterar</a> |
-                    <a href="/demo-1/categoria/deletar?id=<%= model.getId() %>">Deletar</a>>
+                    <a href="/demo-1/categoria/deletar?id=<%= model.getId() %>">Deletar</a>
                     </td>
                 </tr>
             <%}%>

@@ -30,7 +30,5 @@ public class CategoriaAlterarServlet extends HttpServlet {
         RequestDispatcher rd = req.getRequestDispatcher("/categoria-alterar-sucesso.jsp");
         req.setAttribute("id", model.getId());
         rd.forward(req, resp);
-
-    }
-    
+    }  
 }
